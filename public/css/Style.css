@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    height: 100vh;
     background-image: linear-gradient(to top right, white 10%, rgba(255, 192, 203, 0.537));
     background-size: contain;
     overflow-x: hidden;
@@ -46,11 +47,34 @@ footer{
     margin: 0 5%;
 }
 
-h2 {
+h2, h4 {
     padding: 8px;
     border:0px;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.3);
+}
+
+section a:not(#carouselExampleControls > *) {
+    text-decoration: none;
+    color: black;
+    border-radius: 15px;
+    background: rgba(0, 255, 255, 0.3);
+    padding: 8px;
+}
+
+section a:not(#carouselExampleControls > *):hover {
+    text-decoration: none;
+    transition: background-color 1s;
+    background-color: rgba(0, 255, 255, 0.6);
+    color: black;
+}
+
+section li {
+    margin: 15px 0;
+}
+
+section ul {
+    list-style-type: none;
 }
 
 .carousel .carousel-item img {

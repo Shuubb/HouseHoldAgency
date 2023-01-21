@@ -17,8 +17,12 @@ app.get('/Skills&Traits', function (req, res) {
   res.render('HomePage', { title: 'Welcome!' });
 })
 
-app.get('/Home', function (req, res) {
-  res.render('HomePage', { title: 'Welcome!' });
+app.get('/SiteFeatures', function (req, res) {
+  res.render('SiteFeaturesPage', { title: 'Welcome!' });
+})
+
+app.get('/ContactInfo', function (req, res) {
+  res.render('ContactInfoPage', { title: 'Welcome!' });
 })
 
 
