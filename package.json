@@ -1,0 +1,28 @@
+{
+  "type": "commonjs",
+  "name": "householdagancy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "myapp.js",
+  "scripts": {
+    "start": "node myapp.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shuubb/HouseHoldAgency.git"
+  },
+  "author": "Davit Shubitidze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Shuubb/HouseHoldAgency/issues"
+  },
+  "homepage": "https://github.com/Shuubb/HouseHoldAgency#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "lodash": "^4.17.21"
+  }
+}
