@@ -54,7 +54,7 @@ h2, h4 {
     background: rgba(255, 255, 255, 0.3);
 }
 
-section a:not(#carouselExampleControls > *) {
+section a:not(#carouselExampleControls a) {
     text-decoration: none;
     color: black;
     border-radius: 15px;
@@ -62,7 +62,7 @@ section a:not(#carouselExampleControls > *) {
     padding: 8px;
 }
 
-section a:not(#carouselExampleControls > *):hover {
+section a:not(#carouselExampleControls a):hover {
     text-decoration: none;
     transition: background-color 1s;
     background-color: rgba(0, 255, 255, 0.6);
@@ -84,7 +84,7 @@ section ul {
     object-position: 0 0;
 }
 
-#skillBoxes{
+#skillBoxes {
     flex-direction: column;
     max-width: 100%;
 }
@@ -115,16 +115,9 @@ section ul {
 
 @media all and (max-width: 500px){
     section > * {
-        max-width: 80% !important;
+        max-width: 70% !important;
         text-align: center !important;
     }
-
-    section > div:hover {
-        position: static;
-        align-self: center;
-        transform: scale(1.2);
-    }
-
 
     h2 {
         font-size: 23px;
