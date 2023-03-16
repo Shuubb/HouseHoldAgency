@@ -1,0 +1,126 @@
+$color_1: black;
+$background-color_1: rgba(0, 255, 255, 0.6);
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	height: 100vh;
+	background-image: linear-gradient(to top right, white 10%, rgba(255, 192, 203, 0.537));
+	background-size: contain;
+	overflow-x: hidden;
+	&:has(#skillBoxes) {
+		background-image: url('../img/ArrowDown.png'), linear-gradient(to top right, rgb(255, 255, 255) 40%, rgb(255, 192, 203));
+	}
+}
+main {
+	text-align: center;
+}
+section {
+	margin: 0 5%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	>* {
+		margin: 20px 20px;
+		max-width: 40%;
+		align-self: center;
+	}
+	a {
+		&:not(#carouselExampleControls) {
+			a {
+				text-decoration: none;
+				color: $color_1;
+				border-radius: 15px;
+				background: rgba(0, 255, 255, 0.3);
+				padding: 8px;
+				&:hover {
+					text-decoration: none;
+					transition: background-color 1s;
+					background-color: $background-color_1;
+					color: $color_1;
+				}
+			}
+		}
+	}
+	li {
+		margin: 15px 0;
+	}
+	ul {
+		list-style-type: none;
+	}
+}
+footer {
+	margin: 0 5%;
+}
+h2 {
+	padding: 8px;
+	border: 0px;
+	border-radius: 50px;
+	background: rgba(255, 255, 255, 0.3);
+}
+h4 {
+	padding: 8px;
+	border: 0px;
+	border-radius: 50px;
+	background: rgba(255, 255, 255, 0.3);
+}
+.carousel {
+	.carousel-item {
+		img {
+			max-height: 500px;
+			min-width: auto;
+			object-fit: contain;
+			object-position: 0 0;
+		}
+	}
+}
+#skillBoxes {
+	flex-direction: column;
+	max-width: 100%;
+	>div {
+		width: -moz-fit-content;
+		width: fit-content;
+		border-radius: 10px;
+		margin: 20% 0;
+		padding: 10px;
+		position: relative;
+	}
+}
+#skillBoxAdder {
+	font-size: 50px;
+	background: rgba(255, 255, 255, 0.7);
+}
+.right {
+	align-self: flex-end;
+	background: linear-gradient(to bottom left, rgb(238, 122, 141) 40%, yellow);
+}
+.left {
+	align-self: flex-start;
+	background: linear-gradient(to bottom right, rgb(238, 122, 141) 40%, yellow);
+}
+@media all and (min-width: 500px) {
+	section {
+		>div {
+			&:active {
+				transition: scale 1s;
+				scale: 1.2;
+			}
+			&:not(:active) {
+				transition: scale 1s;
+				scale: 1;
+			}
+		}
+	}
+}
+@media all and (max-width: 500px) {
+	section {
+		>* {
+			max-width: 70% !important;
+			text-align: center !important;
+		}
+	}
+	h2 {
+		font-size: 23px;
+	}
+}

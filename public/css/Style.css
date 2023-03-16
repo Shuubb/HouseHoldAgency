@@ -1,127 +1,123 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    height: 100vh;
-    background-image: linear-gradient(to top right, white 10%, rgba(255, 192, 203, 0.537));
-    background-size: contain;
-    overflow-x: hidden;
+  height: 100vh;
+  background-image: linear-gradient(to top right, white 10%, rgba(255, 192, 203, 0.537));
+  background-size: contain;
+  overflow-x: hidden;
 }
-
-body:has(#skillBoxes){
-    background-image: url('../img/ArrowDown.png'),
-                      linear-gradient(to top right, rgb(255, 255, 255) 40%, rgb(255, 192, 203));
+body:has(#skillBoxes) {
+  background-image: url("../img/ArrowDown.png"), linear-gradient(to top right, rgb(255, 255, 255) 40%, rgb(255, 192, 203));
 }
-
 
 main {
-    text-align: center;
+  text-align: center;
 }
 
 section {
-    margin: 0 5%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  margin: 0 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 section > * {
-    margin: 20px 20px;
-    max-width: 40%;
-    align-self: center;
+  margin: 20px 20px;
+  max-width: 40%;
+  align-self: center;
 }
-
-@media all and (min-width: 500px){
-    section > div:active {
-        transition: scale 1s;
-        scale: 1.2;
-    }
-    section > div:not(:active) {
-        transition: scale 1s;
-        scale: 1;
-    }
+section a:not(#carouselExampleControls) a {
+  text-decoration: none;
+  color: black;
+  border-radius: 15px;
+  background: rgba(0, 255, 255, 0.3);
+  padding: 8px;
 }
-
-footer{
-    margin: 0 5%;
+section a:not(#carouselExampleControls) a:hover {
+  text-decoration: none;
+  transition: background-color 1s;
+  background-color: rgba(0, 255, 255, 0.6);
+  color: black;
 }
-
-h2, h4 {
-    padding: 8px;
-    border:0px;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-section a:not(#carouselExampleControls a) {
-    text-decoration: none;
-    color: black;
-    border-radius: 15px;
-    background: rgba(0, 255, 255, 0.3);
-    padding: 8px;
-}
-
-section a:not(#carouselExampleControls a):hover {
-    text-decoration: none;
-    transition: background-color 1s;
-    background-color: rgba(0, 255, 255, 0.6);
-    color: black;
-}
-
 section li {
-    margin: 15px 0;
+  margin: 15px 0;
+}
+section ul {
+  list-style-type: none;
 }
 
-section ul {
-    list-style-type: none;
+footer {
+  margin: 0 5%;
+}
+
+h2 {
+  padding: 8px;
+  border: 0px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+h4 {
+  padding: 8px;
+  border: 0px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 .carousel .carousel-item img {
-    max-height: 500px;
-    min-width: auto;
-    object-fit: contain;
-    object-position: 0 0;
+  max-height: 500px;
+  min-width: auto;
+  object-fit: contain;
+  object-position: 0 0;
 }
 
 #skillBoxes {
-    flex-direction: column;
-    max-width: 100%;
+  flex-direction: column;
+  max-width: 100%;
 }
-
 #skillBoxes > div {
-    width: -moz-fit-content;
-    width: fit-content;
-    border-radius: 10px;
-    margin: 20% 0;
-    padding: 10px;
-    position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  margin: 20% 0;
+  padding: 10px;
+  position: relative;
 }
 
 #skillBoxAdder {
-    font-size: 50px;
-    background: rgba(255, 255, 255, 0.7);
+  font-size: 50px;
+  background: rgba(255, 255, 255, 0.7);
 }
 
-.right{
-    align-self: flex-end;
-    background: linear-gradient(to bottom left, rgb(238, 122, 141) 40%, yellow);
+.right {
+  align-self: flex-end;
+  background: linear-gradient(to bottom left, rgb(238, 122, 141) 40%, yellow);
 }
 
-.left{
-    align-self: flex-start;
-    background: linear-gradient(to bottom right, rgb(238, 122, 141) 40%, yellow);
+.left {
+  align-self: flex-start;
+  background: linear-gradient(to bottom right, rgb(238, 122, 141) 40%, yellow);
 }
 
-@media all and (max-width: 500px){
-    section > * {
-        max-width: 70% !important;
-        text-align: center !important;
-    }
-
-    h2 {
-        font-size: 23px;
-    }
+@media all and (min-width: 500px) {
+  section > div:active {
+    transition: scale 1s;
+    scale: 1.2;
+  }
+  section > div:not(:active) {
+    transition: scale 1s;
+    scale: 1;
+  }
+}
+@media all and (max-width: 500px) {
+  section > * {
+    max-width: 70% !important;
+    text-align: center !important;
+  }
+  h2 {
+    font-size: 23px;
+  }
 }
 
-
+/*# sourceMappingURL=Style.css.map */
