@@ -100,7 +100,7 @@ h4 {
   background: linear-gradient(to bottom right, rgb(238, 122, 141) 40%, yellow);
 }
 
-@media all and (min-width: 500px) {
+@media only screen and (max-width: 991px) {
   section > div:active {
     transition: scale 1s;
     scale: 1.2;
@@ -109,11 +109,12 @@ h4 {
     transition: scale 1s;
     scale: 1;
   }
-}
-@media all and (max-width: 500px) {
   section > * {
     max-width: 70% !important;
     text-align: center !important;
+  }
+  #navlinkContainer {
+    text-align: end !important;
   }
   h2 {
     font-size: 23px;
