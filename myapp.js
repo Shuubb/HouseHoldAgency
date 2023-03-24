@@ -1,24 +1,22 @@
-const express = require('express');
-const expressEjsLayouts = require('express-ejs-layouts');
-const PagesController = require('./Controllers/PagesController.js');
-
-const pagesController = new PagesController();
-const app = express();
-const port = parseInt(process.env.PORT) || 3000;
-
-
-app.use(express.static('public'));
-app.use(expressEjsLayouts);
-
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const express_ejs_layouts_1 = __importDefault(require("express-ejs-layouts"));
+const PagesController_js_1 = __importDefault(require("./Controllers/PagesController.js"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+const app = (0, express_1.default)();
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
+app.use(express_1.default.static('public'));
+app.use(express_ejs_layouts_1.default);
 app.set('layout', './shared/layout');
 app.set('view engine', 'ejs');
-
-app.get('/', pagesController.index);
-app.get('/Skills&Traits', pagesController.skills);
-app.get('/SiteFeatures', pagesController.siteFeatures);
-app.get('/ContactInfo', pagesController.contact);
-
-
-app.listen(port, '192.168.100.5' | 'localhost' , () => console.log(`Now Listening To Port:${port}`));
-
-module.exports = app;
+app.get('/', PagesController_js_1.default.getIndex);
+app.get('/Skills&Traits', PagesController_js_1.default.getSkills);
+app.get('/SiteFeatures', PagesController_js_1.default.getSiteFeatures);
+app.get('/ContactInfo', PagesController_js_1.default.getContact);
+app.listen(port, () => console.log(`Now Listening To Port:${port}`));
+exports.default = app;

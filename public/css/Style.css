@@ -100,6 +100,12 @@ h4 {
   background: linear-gradient(to bottom right, rgb(238, 122, 141) 40%, yellow);
 }
 
+.vr {
+  border-left: 1px solid rgba(128, 128, 128, 0.4);
+  height: 1.5rem;
+  align-self: center;
+}
+
 @media only screen and (max-width: 991px) {
   section > div:active {
     transition: scale 1s;
@@ -118,6 +124,13 @@ h4 {
   }
   h2 {
     font-size: 23px;
+  }
+  .vr {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.4);
+    border-left: 0;
+    width: 6rem;
+    height: 0;
+    align-self: flex-end;
   }
 }
 
